@@ -471,8 +471,55 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
   <!--HTML Widget code-->
   
             <script>console.log("%cWidget from AdobeMuseExpert.com 😊","font: 2em roboto; color: #00bcd4;");</script>
-            
 
-		
+  <!-- Insert Ambiance — vidéo verticale flottante (non-intrusive sur layout Muse) -->
+  <style>
+    .k45-ambiance{
+      position:fixed;
+      right:24px;
+      bottom:24px;
+      width:160px;
+      aspect-ratio:9/16;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 12px 40px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.06);
+      z-index:9998;
+      background:#000;
+      cursor:pointer;
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+    .k45-ambiance:hover{ transform:translateY(-4px) scale(1.03); box-shadow:0 18px 50px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.12); }
+    .k45-ambiance video{ display:block; width:100%; height:100%; object-fit:cover; }
+    .k45-ambiance::after{
+      content:"AMBIANCE";
+      position:absolute; left:10px; bottom:10px;
+      font:600 10px/1 "Outfit","filson-soft",Arial,sans-serif;
+      letter-spacing:.18em; color:#fff;
+      text-shadow:0 1px 4px rgba(0,0,0,.6);
+      pointer-events:none;
+    }
+    .k45-ambiance .k45-close{
+      position:absolute; top:6px; right:6px;
+      width:22px; height:22px; border:0; border-radius:50%;
+      background:rgba(0,0,0,.55); color:#fff;
+      font:600 14px/1 sans-serif; cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      backdrop-filter:blur(4px);
+    }
+    @media (max-width:600px){
+      .k45-ambiance{ width:120px; right:14px; bottom:14px; }
+    }
+    @media (prefers-reduced-motion:reduce){
+      .k45-ambiance video{ display:none; }
+      .k45-ambiance{ background:#1a1a1a url('images/komptoir45-ambiance-poster.jpg') center/cover; }
+    }
+  </style>
+  <aside class="k45-ambiance" aria-label="Ambiance Le Komptoir 45">
+    <button class="k45-close" type="button" aria-label="Fermer la vidéo" onclick="this.parentElement.remove()">×</button>
+    <video autoplay muted loop playsinline preload="metadata" poster="images/komptoir45-ambiance-poster.jpg">
+      <source src="videos/komptoir45-ambiance.mp4" type="video/mp4">
+    </video>
+  </aside>
+
    </body>
 </html>
