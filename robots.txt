@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /assets/private/
+Disallow: /scripts/
+Disallow: /css/
 
 Sitemap: https://lekomptoir45.fr/sitemap.xml

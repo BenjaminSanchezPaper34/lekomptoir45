@@ -1,0 +1,85 @@
+<manifest alg="2" build="2018.1.1.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://lekomptoir45.fr" resolutions="1x" timestamp="1772727158403">
+  <folder name="css">
+    <file name="site_global.css" crc="4136896309"/>
+    <file name="master_a-gabarit.css" crc="4078864112" ref="index"/>
+    <file name="index.css" crc="3776442512" ref="index"/>
+  </folder>
+  <folder name="fonts">
+    <file name="montserrat-extrabold.woff" crc="3908342759"/>
+    <file name="montserrat-black-webfont1.eot" crc="3807122778"/>
+    <file name="montserrat-black-webfont1.svg" crc="166551566"/>
+    <file name="montserrat-regular-webfont.woff" crc="6778641"/>
+    <file name="montserrat-regular-webfont.eot" crc="208200907"/>
+    <file name="montserrat-regular-webfont.svg" crc="3954203612"/>
+    <file name="outfit-regular-webfont.woff" crc="3944101014"/>
+    <file name="outfit-regular-webfont.eot" crc="175980864"/>
+    <file name="outfit-regular-webfont.svg" crc="4278112825"/>
+    <file name="rift_soft_medium-webfont.woff" crc="426914837"/>
+    <file name="rift_soft_medium-webfont.eot" crc="511424416"/>
+    <file name="rift_soft_medium-webfont.svg" crc="42087482"/>
+    <file name="foco-webfont.woff" crc="431871424"/>
+    <file name="foco-webfont.eot" crc="33991408"/>
+    <file name="foco-webfont.svg" crc="520063322"/>
+  </folder>
+  <folder name="assets">
+    <file name="menunumerique-boissons-lekomptoir45.pdf" crc="75985712" seo="true" mt="1697554994000"/>
+    <file name="menunumerique-boissons-lekomptoir452.pdf" crc="4116327576" seo="true" mt="1719907909000"/>
+    <file name="textes-a4-lekomptoir45.pdf" crc="3868561728" seo="true" mt="1745854776000"/>
+    <file name="boissons-lekomptoir45.pdf" crc="148125808" seo="true" mt="1745854672000"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="phone>index:phone>la-carte:index"/>
+    <file name="museutils.js" crc="3939489907" ref="phone>index:phone>la-carte:index"/>
+    <file name="whatinput.js" crc="86476730" ref="phone>index:phone>la-carte:index"/>
+    <file name="museconfig.js" crc="128606099" ref="phone>index:phone>la-carte:index"/>
+    <file name="jquery.watch.js" crc="522499760" ref="phone>index:phone>la-carte:index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="85124417" ref="phone>index:index"/>
+    <file name="require.js" crc="4177726516" ref="phone>index:phone>la-carte:index"/>
+  </folder>
+  <folder name="images">
+    <file name="favicon.ico" crc="4124222037" ref="phone>index"/>
+    <file name="logo-lekomptoir45.svg" crc="3780246500" seo="true" ref="phone>index:phone>la-carte:index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="logo-lekomptoir45_poster_.png" crc="3924027241" ref="phone>index"/>
+    <file name="instagramgris-ortance.svg" crc="4106048130" seo="true" ref="phone>index:phone>la-carte:index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="instagramgris-ortance_poster_.png" crc="3788988875" ref="phone>index"/>
+    <file name="facebookgris-ortance.svg" crc="275361103" seo="true" ref="phone>index:phone>la-carte:index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="facebookgris-ortance_poster_.png" crc="3924126691" ref="phone>index"/>
+    <file name="logoblanc-paper34.svg" crc="3970129298" seo="true" ref="phone>index:phone>la-carte:index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="logoblanc-paper34_poster_.png" crc="50960925" ref="phone>index"/>
+    <file name="fondphone-lekomptoir45.jpg" crc="4208444530" ref="phone>index:phone>la-carte">
+      <caption webpage="index" alt=""/>
+      <caption webpage="la-carte" alt=""/>
+    </file>
+    <file name="fond-lekomptoir45.jpg" crc="42898138" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="master_a-gabarit.css" crc="4040052408" ref="phone>la-carte:phone>index"/>
+      <file name="la-carte.css" crc="164294556" ref="phone>la-carte"/>
+      <file name="index.css" crc="4176422979" ref="phone>index"/>
+    </folder>
+    <file name="index.html" crc="3776591822" seo="true" mt="1772727122770" redirect="true"/>
+    <file name="la-carte.html" crc="514139203" seo="true" mt="1745855799813" redirect="true"/>
+  </folder>
+  <file name="index.html" crc="4042453479" seo="true" mt="1772727098240" redirect="true"/>
+</manifest>
