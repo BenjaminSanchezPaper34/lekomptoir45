@@ -279,6 +279,33 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   }
   </script>
   <!-- ============ /SEO ============ -->
+
+  <!-- Override visuel widgets Elfsight pour intégration palette site -->
+  <style>
+    /* Conteneurs widgets Elfsight : transparent, centré, espacement souple */
+    .elfsight-app-914de7cb-68f6-4c89-a47f-7109ba994a37,
+    .elfsight-app-a5b64838-2257-441a-9a51-f435f4245e3b {
+      background: transparent !important;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 12px 0;
+      --ef-background-color: transparent;
+      --ef-bg-color: transparent;
+      --ef-card-background: rgba(255,255,255,0.04);
+      --ef-text-color: #B4B4B4;
+      --ef-secondary-text-color: #C8C8C8;
+      --ef-accent-color: #FFFFFF;
+      --ef-border-color: rgba(180,180,180,0.15);
+      --ef-link-color: #FFFFFF;
+      --ef-font-family: filson-soft, "Outfit", Arial, sans-serif;
+      color-scheme: dark;
+    }
+    /* iframe générée par Elfsight : forcer fond transparent */
+    .elfsight-app-914de7cb-68f6-4c89-a47f-7109ba994a37 iframe,
+    .elfsight-app-a5b64838-2257-441a-9a51-f435f4245e3b iframe {
+      background: transparent !important;
+    }
+  </style>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=4136896309"/>
   <link rel="stylesheet" type="text/css" href="css/master_a-gabarit.css?crc=4078864112"/>
