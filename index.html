@@ -402,109 +402,6 @@ to use and available for download at: http://adobemuseexpert.com/
      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 <div class="elfsight-app-a5b64838-2257-441a-9a51-f435f4245e3b"></div>
     </div>
-    <div class="colelem" id="k45BentoWrap"><!-- bento ambiance -->
-     <style>
-       #k45Bento{
-         position:relative; width:100%; max-width:1100px;
-         margin:60px auto 40px; padding:0 16px;
-         font-family:"Outfit","filson-soft",Arial,sans-serif;
-       }
-       #k45Bento .k45-bento-head{
-         text-align:center; margin-bottom:28px;
-       }
-       #k45Bento .k45-bento-head h2{
-         font-size:clamp(24px,3.2vw,34px); margin:0 0 8px;
-         letter-spacing:.04em; color:#222; font-weight:600;
-       }
-       #k45Bento .k45-bento-head p{
-         margin:0; font-size:14px; color:#777; letter-spacing:.18em; text-transform:uppercase;
-       }
-       #k45Bento .k45-bento-grid{
-         display:grid;
-         grid-template-columns:repeat(4,1fr);
-         grid-auto-rows:140px;
-         gap:12px;
-       }
-       #k45Bento .k45-tile{
-         position:relative; overflow:hidden; border-radius:14px;
-         background:#111; box-shadow:0 6px 22px rgba(0,0,0,.18);
-         transition:transform .35s ease, box-shadow .35s ease;
-       }
-       #k45Bento .k45-tile:hover{ transform:translateY(-4px); box-shadow:0 14px 34px rgba(0,0,0,.28); }
-       #k45Bento .k45-tile img,
-       #k45Bento .k45-tile video{
-         width:100%; height:100%; object-fit:cover; display:block;
-       }
-       #k45Bento .k45-tile .k45-cap{
-         position:absolute; left:12px; bottom:10px; z-index:2;
-         font:600 11px/1 "Outfit",Arial,sans-serif; letter-spacing:.16em;
-         color:#fff; text-transform:uppercase;
-         text-shadow:0 1px 6px rgba(0,0,0,.6);
-       }
-       /* Layout: video grande à gauche (2x3), grand panorama Brescou (4x2 en haut) */
-       #k45Bento .k45-t-video{ grid-column:span 2; grid-row:span 3; }
-       #k45Bento .k45-t-wide { grid-column:span 2; grid-row:span 2; }
-       #k45Bento .k45-t-tall { grid-column:span 1; grid-row:span 2; }
-       #k45Bento .k45-t-sq   { grid-column:span 1; grid-row:span 1; }
-       @media (max-width:780px){
-         #k45Bento .k45-bento-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:120px; }
-         #k45Bento .k45-t-video{ grid-column:span 2; grid-row:span 3; }
-         #k45Bento .k45-t-wide { grid-column:span 2; grid-row:span 2; }
-         #k45Bento .k45-t-tall { grid-column:span 1; grid-row:span 2; }
-         #k45Bento .k45-t-sq   { grid-column:span 1; grid-row:span 1; }
-       }
-     </style>
-     <section id="k45Bento" aria-label="Ambiance et plats du Komptoir 45">
-       <div class="k45-bento-head">
-         <h2>L'ambiance du Komptoir</h2>
-         <p>Plats signature · Cocktails · Cap d'Agde</p>
-       </div>
-       <div class="k45-bento-grid">
-         <div class="k45-tile k45-t-video">
-           <video autoplay muted loop playsinline preload="metadata" poster="images/komptoir45-ambiance-poster.jpg">
-             <source src="videos/komptoir45-ambiance.mp4" type="video/mp4">
-           </video>
-           <span class="k45-cap">Ambiance</span>
-         </div>
-         <div class="k45-tile k45-t-wide">
-           <img loading="lazy" src="images/plats/brescou-coucher-soleil.webp" alt="Fort de Brescou au coucher de soleil depuis Cap d'Agde">
-           <span class="k45-cap">Brescou</span>
-         </div>
-         <div class="k45-tile k45-t-sq">
-           <img loading="lazy" src="images/plats/burger.webp" alt="Burger maison du Komptoir 45">
-           <span class="k45-cap">Burger</span>
-         </div>
-         <div class="k45-tile k45-t-sq">
-           <img loading="lazy" src="images/plats/aperol-spritz.webp" alt="Aperol Spritz">
-           <span class="k45-cap">Spritz</span>
-         </div>
-         <div class="k45-tile k45-t-sq">
-           <img loading="lazy" src="images/plats/poke-bowl.webp" alt="Poke bowl du Komptoir 45">
-           <span class="k45-cap">Poke</span>
-         </div>
-         <div class="k45-tile k45-t-sq">
-           <img loading="lazy" src="images/plats/focaccia-saumon.webp" alt="Focaccia saumon gravlax">
-           <span class="k45-cap">Focaccia</span>
-         </div>
-         <div class="k45-tile k45-t-sq">
-           <img loading="lazy" src="images/plats/burrata-tomates.webp" alt="Burrata tomates">
-           <span class="k45-cap">Burrata</span>
-         </div>
-         <div class="k45-tile k45-t-sq">
-           <img loading="lazy" src="images/plats/falafels.webp" alt="Falafels maison">
-           <span class="k45-cap">Falafels</span>
-         </div>
-         <div class="k45-tile k45-t-sq">
-           <img loading="lazy" src="images/plats/gambas.webp" alt="Gambas">
-           <span class="k45-cap">Gambas</span>
-         </div>
-         <div class="k45-tile k45-t-sq">
-           <img loading="lazy" src="images/plats/coeur-coulant-chocolat.webp" alt="Cœur coulant chocolat">
-           <span class="k45-cap">Coulant</span>
-         </div>
-       </div>
-     </section>
-    </div>
    </div>
    <div class="verticalspacer" data-offset-top="1422" data-content-above-spacer="1422" data-content-below-spacer="140"></div>
    <div class="clearfix grpelem" id="ppu195"><!-- column -->
@@ -536,6 +433,83 @@ to use and available for download at: http://adobemuseexpert.com/
     </div>
    </div>
   </div>
+  <!-- Bento Ambiance — hors layout Muse, en flux normal sous #page -->
+  <style>
+    #k45Bento{
+      position:relative; box-sizing:border-box;
+      width:100%; max-width:920px;
+      margin:40px auto 60px; padding:0 16px;
+      font-family:"Outfit","filson-soft",Arial,sans-serif;
+    }
+    #k45Bento *,#k45Bento *::before,#k45Bento *::after{ box-sizing:border-box; }
+    #k45Bento .k45-bento-head{ text-align:center; margin-bottom:24px; }
+    #k45Bento .k45-bento-head h2{
+      font-size:clamp(22px,2.4vw,30px); margin:0 0 6px;
+      letter-spacing:.04em; color:#fff; font-weight:600;
+      text-shadow:0 1px 8px rgba(0,0,0,.5);
+    }
+    #k45Bento .k45-bento-head p{
+      margin:0; font-size:12px; color:rgba(255,255,255,.7);
+      letter-spacing:.22em; text-transform:uppercase;
+    }
+    #k45Bento .k45-bento-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      grid-auto-rows:130px;
+      gap:10px;
+    }
+    #k45Bento .k45-tile{
+      position:relative; overflow:hidden; border-radius:12px;
+      background:#111; box-shadow:0 6px 22px rgba(0,0,0,.35);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+    #k45Bento .k45-tile:hover{ transform:translateY(-4px); box-shadow:0 14px 34px rgba(0,0,0,.5); }
+    #k45Bento .k45-tile img,
+    #k45Bento .k45-tile video{
+      width:100%; height:100%; object-fit:cover; display:block;
+    }
+    #k45Bento .k45-tile .k45-cap{
+      position:absolute; left:10px; bottom:8px; z-index:2;
+      font:600 10px/1 "Outfit",Arial,sans-serif; letter-spacing:.18em;
+      color:#fff; text-transform:uppercase;
+      text-shadow:0 1px 6px rgba(0,0,0,.7);
+    }
+    #k45Bento .k45-t-video{ grid-column:span 2; grid-row:span 3; }
+    #k45Bento .k45-t-wide { grid-column:span 2; grid-row:span 2; }
+    #k45Bento .k45-t-sq   { grid-column:span 1; grid-row:span 1; }
+    @media (max-width:600px){
+      #k45Bento .k45-bento-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:110px; }
+      #k45Bento .k45-t-video{ grid-column:span 2; grid-row:span 3; }
+      #k45Bento .k45-t-wide { grid-column:span 2; grid-row:span 2; }
+      #k45Bento .k45-t-sq   { grid-column:span 1; grid-row:span 1; }
+    }
+  </style>
+  <section id="k45Bento" aria-label="Ambiance et plats du Komptoir 45">
+    <div class="k45-bento-head">
+      <h2>L'ambiance du Komptoir</h2>
+      <p>Plats signature · Cocktails · Cap d'Agde</p>
+    </div>
+    <div class="k45-bento-grid">
+      <div class="k45-tile k45-t-video">
+        <video autoplay muted loop playsinline preload="metadata" poster="images/komptoir45-ambiance-poster.jpg">
+          <source src="videos/komptoir45-ambiance.mp4" type="video/mp4">
+        </video>
+        <span class="k45-cap">Ambiance</span>
+      </div>
+      <div class="k45-tile k45-t-wide">
+        <img loading="lazy" src="images/plats/brescou-coucher-soleil.webp" alt="Fort de Brescou au coucher de soleil">
+        <span class="k45-cap">Brescou</span>
+      </div>
+      <div class="k45-tile k45-t-sq"><img loading="lazy" src="images/plats/burger.webp" alt="Burger"><span class="k45-cap">Burger</span></div>
+      <div class="k45-tile k45-t-sq"><img loading="lazy" src="images/plats/aperol-spritz.webp" alt="Aperol Spritz"><span class="k45-cap">Spritz</span></div>
+      <div class="k45-tile k45-t-sq"><img loading="lazy" src="images/plats/poke-bowl.webp" alt="Poke bowl"><span class="k45-cap">Poke</span></div>
+      <div class="k45-tile k45-t-sq"><img loading="lazy" src="images/plats/focaccia-saumon.webp" alt="Focaccia saumon"><span class="k45-cap">Focaccia</span></div>
+      <div class="k45-tile k45-t-sq"><img loading="lazy" src="images/plats/burrata-tomates.webp" alt="Burrata tomates"><span class="k45-cap">Burrata</span></div>
+      <div class="k45-tile k45-t-sq"><img loading="lazy" src="images/plats/falafels.webp" alt="Falafels"><span class="k45-cap">Falafels</span></div>
+      <div class="k45-tile k45-t-sq"><img loading="lazy" src="images/plats/gambas.webp" alt="Gambas"><span class="k45-cap">Gambas</span></div>
+      <div class="k45-tile k45-t-sq"><img loading="lazy" src="images/plats/coeur-coulant-chocolat.webp" alt="Cœur coulant chocolat"><span class="k45-cap">Coulant</span></div>
+    </div>
+  </section>
   <!-- JS includes -->
   <script type="text/javascript">
    if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
