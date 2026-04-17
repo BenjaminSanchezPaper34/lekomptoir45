@@ -532,7 +532,8 @@ to use and available for download at: http://adobemuseexpert.com/
     #k45Mobar a.k45-cta{ background:#ED1C24; }
     #k45Mobar a.k45-cta:active{ background:#c4151c; }
     #k45Mobar svg{ width:20px; height:20px; fill:currentColor; }
-    @media (max-width:600px){ #k45Mobar{ display:block; } }
+    /* Cible vraiment les téléphones (le viewport=960 fausserait max-width) */
+    @media (max-device-width:768px), (pointer:coarse) and (max-width:1024px){ #k45Mobar{ display:block; } }
   </style>
   <section id="k45Bento" aria-label="Ambiance et plats du Komptoir 45">
     <div class="k45-bento-head">
