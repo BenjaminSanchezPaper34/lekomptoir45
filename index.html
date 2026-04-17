@@ -368,16 +368,27 @@
     .social a:hover svg{ fill:#0b0b0b; }
     .social svg{ width:18px; height:18px; fill:rgba(255,255,255,.85); transition:fill .3s ease; }
 
-    /* ============ FOOTER ============ */
+    /* ============ FOOTER (inspiré chiringuito) ============ */
     footer{
-      padding:30px 24px calc(30px + env(safe-area-inset-bottom));
-      text-align:center; color:rgba(255,255,255,.45); font-size:11px;
-      letter-spacing:.18em; border-top:1px solid rgba(255,255,255,.06);
+      border-top:1px solid rgba(255,255,255,.1);
+      padding:24px 24px calc(24px + env(safe-area-inset-bottom));
       margin-top:40px;
     }
-    footer a{ color:rgba(255,255,255,.7); transition:color .3s ease; }
-    footer a:hover{ color:#fff; }
-    footer .sep{ margin:0 10px; opacity:.4; }
+    .footer-row{
+      max-width:980px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; flex-wrap:wrap;
+      font-size:11px; color:rgba(255,255,255,.4); letter-spacing:.08em;
+    }
+    .footer-row a{
+      display:inline-flex; align-items:center; gap:8px;
+      color:rgba(255,255,255,.4); transition:color .3s ease;
+    }
+    .footer-row a:hover{ color:rgba(255,255,255,.75); }
+    .footer-row img{ height:12px; width:auto; opacity:.55; }
+    @media (max-width:500px){
+      .footer-row{ justify-content:center; text-align:center; }
+    }
 
     /* ============ BARRE MOBILE STICKY ============ */
     .mobar{ display:none; }
@@ -544,9 +555,13 @@
 
   <!-- ============ FOOTER ============ -->
   <footer>
-    LE KOMPTOIR 45 © <script>document.write(new Date().getFullYear())</script> · Tous droits réservés
-    <span class="sep">·</span>
-    Réalisé par <a href="http://paper34.fr" target="_blank" rel="noopener">Paper34</a>
+    <div class="footer-row">
+      <p>LE KOMPTOIR 45 © <script>document.write(new Date().getFullYear())</script> Tous droits réservés</p>
+      <a href="http://paper34.fr" target="_blank" rel="noopener">
+        Réalisé par
+        <img src="images/logoblanc-paper34.svg" alt="Paper34" width="64" height="12" loading="lazy">
+      </a>
+    </div>
   </footer>
 
   <!-- ============ BARRE MOBILE ============ -->
