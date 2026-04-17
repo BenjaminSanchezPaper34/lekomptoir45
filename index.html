@@ -286,7 +286,7 @@
 
     /* ============ INFO CARDS ============ */
     .info-grid{
-      display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+      display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
       margin:40px 0;
     }
     @media (max-width:700px){ .info-grid{ grid-template-columns:1fr; } }
@@ -343,8 +343,15 @@
 
     /* ============ BENTO ============ */
     .bento-grid{
-      display:grid; grid-template-columns:repeat(4,1fr);
-      grid-auto-rows:180px; gap:12px;
+      display:grid; gap:12px;
+      grid-template-columns:repeat(4,1fr);
+      grid-template-rows:repeat(5,180px);
+      grid-template-areas:
+        "v v w w"
+        "v v w w"
+        "v v b b"
+        "s1 s2 b b"
+        "s3 s4 s5 s6";
     }
     .tile{
       position:relative; overflow:hidden; border-radius:16px;
@@ -365,16 +372,27 @@
       color:#fff; text-transform:uppercase;
       text-shadow:0 1px 8px rgba(0,0,0,.9);
     }
-    .t-video{ grid-column:span 2; grid-row:span 3; }
-    .t-wide{ grid-column:span 2; grid-row:span 2; }
-    .t-h{ grid-column:span 2; grid-row:span 1; } /* tuile large 2x1 */
-    .t-sq{ grid-column:span 1; grid-row:span 1; }
+    .t-video{ grid-area:v; }
+    .t-wide { grid-area:w; }
+    .t-big  { grid-area:b; }
+    .t-s1{ grid-area:s1; } .t-s2{ grid-area:s2; }
+    .t-s3{ grid-area:s3; } .t-s4{ grid-area:s4; }
+    .t-s5{ grid-area:s5; } .t-s6{ grid-area:s6; }
     @media (max-width:700px){
-      .bento-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:150px; gap:10px; }
-      .t-video{ grid-column:span 2; grid-row:span 3; }
-      .t-wide{ grid-column:span 2; grid-row:span 2; }
-      .t-h{ grid-column:span 2; grid-row:span 1; }
-      .t-sq{ grid-column:span 1; grid-row:span 1; }
+      .bento-grid{
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(9,140px);
+        grid-template-areas:
+          "v v"
+          "v v"
+          "w w"
+          "w w"
+          "b b"
+          "b b"
+          "s1 s2"
+          "s3 s4"
+          "s5 s6";
+      }
     }
 
     /* ============ SOCIAL ============ */
@@ -487,11 +505,6 @@
           <span class="label">Adresse</span>
           <span class="value">Mail de Rochelongue<br>34300 Cap d'Agde</span>
         </a>
-        <a class="info-card" href="tel:+33467398131">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
-          <span class="label">Téléphone</span>
-          <span class="value">04 67 39 81 31</span>
-        </a>
         <div class="info-card">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 11h-3V7h2v4h2z"/></svg>
           <span class="label">Horaires</span>
@@ -518,13 +531,13 @@
         <div class="tile t-wide">
           <img loading="lazy" src="images/plats/brescou-coucher-soleil.webp" alt="Fort de Brescou au coucher de soleil"><span class="cap">Brescou</span>
         </div>
-        <div class="tile t-h"><img loading="lazy" src="images/plats/burger.webp" alt="Burger"><span class="cap">Burger</span></div>
-        <div class="tile t-sq"><img loading="lazy" src="images/plats/aperol-spritz.webp" alt="Aperol Spritz"><span class="cap">Spritz</span></div>
-        <div class="tile t-sq"><img loading="lazy" src="images/plats/poke-bowl.webp" alt="Poke bowl"><span class="cap">Poke</span></div>
-        <div class="tile t-sq"><img loading="lazy" src="images/plats/burrata-tomates.webp" alt="Burrata tomates"><span class="cap">Burrata</span></div>
-        <div class="tile t-sq"><img loading="lazy" src="images/plats/falafels.webp" alt="Falafels"><span class="cap">Falafels</span></div>
-        <div class="tile t-h"><img loading="lazy" src="images/plats/gambas.webp" alt="Gambas"><span class="cap">Gambas</span></div>
-        <div class="tile t-sq"><img loading="lazy" src="images/plats/coeur-coulant-chocolat.webp" alt="Cœur coulant chocolat"><span class="cap">Coulant</span></div>
+        <div class="tile t-big"><img loading="lazy" src="images/plats/burger.webp" alt="Burger"><span class="cap">Burger</span></div>
+        <div class="tile t-s1"><img loading="lazy" src="images/plats/aperol-spritz.webp" alt="Aperol Spritz"><span class="cap">Spritz</span></div>
+        <div class="tile t-s2"><img loading="lazy" src="images/plats/poke-bowl.webp" alt="Poke bowl"><span class="cap">Poke</span></div>
+        <div class="tile t-s3"><img loading="lazy" src="images/plats/burrata-tomates.webp" alt="Burrata tomates"><span class="cap">Burrata</span></div>
+        <div class="tile t-s4"><img loading="lazy" src="images/plats/falafels.webp" alt="Falafels"><span class="cap">Falafels</span></div>
+        <div class="tile t-s5"><img loading="lazy" src="images/plats/gambas.webp" alt="Gambas"><span class="cap">Gambas</span></div>
+        <div class="tile t-s6"><img loading="lazy" src="images/plats/coeur-coulant-chocolat.webp" alt="Cœur coulant chocolat"><span class="cap">Coulant</span></div>
       </div>
     </div>
   </section>
