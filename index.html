@@ -345,7 +345,7 @@
     .bento-grid{
       display:grid; gap:12px;
       grid-template-columns:repeat(4,1fr);
-      grid-template-rows:repeat(5,180px);
+      grid-template-rows:repeat(5,230px);
       grid-template-areas:
         "v v w w"
         "v v w w"
@@ -381,7 +381,7 @@
     @media (max-width:700px){
       .bento-grid{
         grid-template-columns:repeat(2,1fr);
-        grid-template-rows:repeat(9,140px);
+        grid-template-rows:repeat(9,200px);
         grid-template-areas:
           "v v"
           "v v"
@@ -396,16 +396,16 @@
     }
 
     /* ============ SOCIAL ============ */
-    .social{ display:flex; gap:14px; justify-content:center; margin-top:30px; }
+    .social{ display:flex; gap:20px; justify-content:center; margin-top:40px; }
     .social a{
       display:flex; align-items:center; justify-content:center;
-      width:44px; height:44px; border-radius:50%;
+      width:68px; height:68px; border-radius:50%;
       background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12);
       transition:all .3s ease;
     }
     .social a:hover{ background:#fff; transform:translateY(-3px); }
     .social a:hover svg{ fill:#0b0b0b; }
-    .social svg{ width:18px; height:18px; fill:rgba(255,255,255,.85); transition:fill .3s ease; }
+    .social svg{ width:28px; height:28px; fill:rgba(255,255,255,.85); transition:fill .3s ease; }
 
     /* ============ FOOTER (inspiré chiringuito) ============ */
     footer{
