@@ -41,7 +41,11 @@
   <meta name="twitter:image" content="https://lekomptoir45.fr/images/og-lekomptoir45.jpg"/>
 
   <link rel="icon" type="image/svg+xml" href="images/logo-lekomptoir45.svg"/>
+  <link rel="apple-touch-icon" href="images/logo-lekomptoir45.svg"/>
   <link rel="preload" as="image" href="images/fond-noir-lekomptoir45.webp" type="image/webp"/>
+  <link rel="preconnect" href="https://elfsightcdn.com" crossorigin>
+  <link rel="preconnect" href="https://core.service.elfsight.com" crossorigin>
+  <link rel="dns-prefetch" href="https://static.elfsight.com">
 
   <!-- JSON-LD : Restaurant -->
   <script type="application/ld+json">
@@ -54,7 +58,11 @@
     "description": "Restaurant au Mail de Rochelongue à Cap d'Agde. Tapas, planches ibériques, bowls, focaccias, burgers et grillades à la plancha. Cuisine méditerranéenne avec produits frais et locaux. Options végétariennes, véganes et sans gluten.",
     "url": "https://lekomptoir45.fr/",
     "telephone": "+33467398131",
-    "image": ["https://lekomptoir45.fr/images/og-lekomptoir45.jpg"],
+    "image": [
+      "https://lekomptoir45.fr/images/og-lekomptoir45.jpg",
+      "https://lekomptoir45.fr/images/plats/burger.jpg",
+      "https://lekomptoir45.fr/images/plats/poke-bowl.jpg"
+    ],
     "logo": "https://lekomptoir45.fr/images/logo-lekomptoir45.svg",
     "priceRange": "€€",
     "currenciesAccepted": "EUR",
@@ -173,6 +181,18 @@
 
   <script type="application/ld+json">
   { "@context":"https://schema.org","@type":"WebSite","@id":"https://lekomptoir45.fr/#website","url":"https://lekomptoir45.fr/","name":"Le Komptoir 45","inLanguage":"fr-FR","publisher":{"@id":"https://lekomptoir45.fr/#organization"} }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://lekomptoir45.fr/"},
+      {"@type":"ListItem","position":2,"name":"Carte","item":"https://lekomptoir45.fr/assets/textes-a4-lekomptoir45.pdf"},
+      {"@type":"ListItem","position":3,"name":"Boissons","item":"https://lekomptoir45.fr/assets/boissons-lekomptoir45.pdf"}
+    ]
+  }
   </script>
   <!-- ============ /SEO ============ -->
 
@@ -565,8 +585,9 @@
         <p>Avis clients</p>
       </div>
       <div class="reviews-wrap reveal">
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-        <div class="elfsight-app-a5b64838-2257-441a-9a51-f435f4245e3b"></div>
+        <!-- Elfsight All-in-One Reviews | LE KOMPTOIR 45 - AGDE -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-914de7cb-68f6-4c89-a47f-7109ba994a37" data-elfsight-app-lazy></div>
       </div>
       <div style="text-align:center; margin-top:24px">
         <a class="cta cta-ghost" href="https://g.page/r/Ce3ni-2CBJAcEB0/review" target="_blank" rel="noopener">Donnez-nous votre avis</a>
