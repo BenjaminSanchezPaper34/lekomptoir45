@@ -534,6 +534,54 @@
       .fab-primary::before{ animation:none; }
     }
 
+    /* ============ CARTE / MENU ============ */
+    .menu-list{ display:flex; flex-direction:column; gap:14px; max-width:880px; margin:0 auto; }
+    .menu-cat{
+      background:rgba(15,15,15,.72);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px; overflow:hidden;
+      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    }
+    .menu-cat[open]{ border-color:rgba(237,28,36,.45); }
+    .menu-cat > summary{
+      list-style:none; cursor:pointer;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:18px 22px; font-family:"Montserrat",sans-serif;
+      font-size:15px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+      color:#fff;
+    }
+    .menu-cat > summary::-webkit-details-marker{ display:none; }
+    .menu-cat > summary::after{
+      content:"+"; font-size:24px; font-weight:300; color:#ED1C24;
+      transition:transform .3s ease;
+    }
+    .menu-cat[open] > summary::after{ content:"−"; transform:rotate(180deg); }
+    .menu-items{ padding:0 22px 20px 22px; display:flex; flex-direction:column; gap:14px; }
+    .menu-item{
+      display:grid; grid-template-columns:1fr auto; gap:8px 16px;
+      padding-bottom:12px; border-bottom:1px dashed rgba(255,255,255,.08);
+    }
+    .menu-item:last-child{ border-bottom:none; padding-bottom:0; }
+    .menu-name{ font-weight:600; color:#f3f3f3; font-size:15px; }
+    .menu-name .badge{
+      display:inline-block; margin-left:6px; padding:1px 6px;
+      font-size:10px; font-weight:700; letter-spacing:.08em;
+      background:rgba(237,28,36,.18); color:#ff6b72; border-radius:4px;
+      text-transform:uppercase; vertical-align:middle;
+    }
+    .menu-desc{ grid-column:1/-1; color:rgba(233,233,233,.62); font-size:13.5px; line-height:1.5; }
+    .menu-price{ font-family:"Montserrat",sans-serif; font-weight:800; color:#ED1C24; font-size:15px; white-space:nowrap; }
+    .menu-note{
+      text-align:center; margin-top:24px; font-size:13px;
+      color:rgba(233,233,233,.55); font-style:italic;
+    }
+    @media (max-width:600px){
+      .menu-cat > summary{ padding:16px 18px; font-size:13px; }
+      .menu-items{ padding:0 18px 18px 18px; }
+      .menu-name, .menu-price{ font-size:14.5px; }
+      .menu-desc{ font-size:13px; }
+    }
+
     /* ============ REVEAL ANIM ============ */
     .reveal{ opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .8s ease; }
     .reveal.is-visible{ opacity:1; transform:translateY(0); }
@@ -566,7 +614,7 @@
       </div>
 
       <div class="cta-row">
-        <a class="cta cta-primary" href="assets/textes-a4-lekomptoir45.pdf" target="_blank" rel="noopener">
+        <a class="cta cta-primary" href="#carte">
           Consulter la carte
         </a>
         <a class="cta cta-ghost" href="tel:+33467398131">
@@ -591,6 +639,131 @@
           <span class="label">Horaires</span>
           <span class="value">Tous les jours<br>dès 18h</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARTE ============ -->
+  <section id="carte">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>La carte</h2>
+        <p>Saison 2026 · produits frais et locaux</p>
+      </div>
+      <div class="menu-list reveal">
+
+        <details class="menu-cat" open>
+          <summary>Tapas</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Pan con tomato</span><span class="menu-price">5,50&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Frites fraîches</span><span class="menu-price">6,00&nbsp;€</span><span class="menu-desc">À la graisse de bœuf.</span></div>
+            <div class="menu-item"><span class="menu-name">Tortilla</span><span class="menu-price">6,50&nbsp;€</span><span class="menu-desc">Pommes de terre, oignons.</span></div>
+            <div class="menu-item"><span class="menu-name">Frites de patates douces</span><span class="menu-price">7,50&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Piment del padron</span><span class="menu-price">7,50&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Tenders de poulet ou de colin multigrains</span><span class="menu-price">8,50&nbsp;€</span><span class="menu-desc">Sauce sweet and sour.</span></div>
+            <div class="menu-item"><span class="menu-name">Croquettes de jambon ibérique</span><span class="menu-price">8,50&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Falafels sauce tahini <span class="badge">Végan · Sans gluten</span></span><span class="menu-price">8,50&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Guacamole maison et tortillas</span><span class="menu-price">8,50&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Houmous maison et ses toasts</span><span class="menu-price">8,50&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Camembert rôti</span><span class="menu-price">9,00&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Acras de morue antillais</span><span class="menu-price">9,50&nbsp;€</span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Planches</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Planche mixte ibérique</span><span class="menu-price">21,00&nbsp;€</span><span class="menu-desc">Charcuteries et fromages.</span></div>
+            <div class="menu-item"><span class="menu-name">Planche de la mer</span><span class="menu-price">21,00&nbsp;€</span><span class="menu-desc">Pépites d'encornets sel et poivre, fritures de calamars, crevettes mini twister, crevettes kuro, saumon gravlax maison.</span></div>
+            <div class="menu-item"><span class="menu-name">Planche Terre-Mer</span><span class="menu-price">21,00&nbsp;€</span><span class="menu-desc">Morcilla séchée, coppa, Fuet, friture de calamars, saumon gravlax, colin multigrains.</span></div>
+            <div class="menu-item"><span class="menu-name">Planche jambon « Coche »</span><span class="menu-price">9,50&nbsp;€ · 18,00&nbsp;€</span><span class="menu-desc">Pan con tomate. Petite / Grande.</span></div>
+            <div class="menu-item"><span class="menu-name">Planche de fromages ibériques</span><span class="menu-price">11,00&nbsp;€ · 21,00&nbsp;€</span><span class="menu-desc">Et son confit de figue. Petite / Grande.</span></div>
+            <div class="menu-item"><span class="menu-name">Planche de charcuterie ibérique</span><span class="menu-price">11,00&nbsp;€ · 21,00&nbsp;€</span><span class="menu-desc">Jambon « Coche », morcilla séchée, coppa, Fuet, chorizo. Petite / Grande.</span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Bowls</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Poke bowl</span><span class="menu-price">20,00&nbsp;€</span><span class="menu-desc">Riz de Camargue, saumon gravlax ou thon (en tartare) AGA La Poissonnerie, guacamole, choux rouge, concombre, radis, vinaigrette asiatique maison, mélange de graines.</span></div>
+            <div class="menu-item"><span class="menu-name">Falafels bowl <span class="badge">Végan</span></span><span class="menu-price">20,00&nbsp;€</span><span class="menu-desc">Quinoa, falafels, guacamole, houmous, choux rouge, tomates cerises, roquette, sauce tahini, mélange de graines.</span></div>
+            <div class="menu-item"><span class="menu-name">Poke tenders au poulet ou au colin multigrains</span><span class="menu-price">20,00&nbsp;€</span><span class="menu-desc">Riz de Camargue ou quinoa, choux rouge, jeunes pousses, guacamole, tomates cerises, vinaigrette maison et aigre-douce, mélange de graines.</span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Focaccia</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Focaccia ibérique</span><span class="menu-price">9,00&nbsp;€ · 17,00&nbsp;€</span><span class="menu-desc">Base stracciatella, jambon ibérique « Coche », tomates séchées, roquette, mélange de graines.</span></div>
+            <div class="menu-item"><span class="menu-name">Focaccia nordique</span><span class="menu-price">9,00&nbsp;€ · 17,00&nbsp;€</span><span class="menu-desc">Base guacamole maison, saumon gravlax AGA La Poissonnerie, jeunes pousses, mélange de graines.</span></div>
+            <div class="menu-item"><span class="menu-name">Focaccia grecque</span><span class="menu-price">9,00&nbsp;€ · 17,00&nbsp;€</span><span class="menu-desc">Base houmous maison, féta, miel, tomates cerises, roquette, mélange de graines.</span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Burgers</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Burger du Komptoir 45</span><span class="menu-price">21,00&nbsp;€</span><span class="menu-desc">Pain artisanal, steak haché façon bouchère 150 g, Comté, tomates séchées, roquette, sauce maison.</span></div>
+            <div class="menu-item"><span class="menu-name">Fish burger</span><span class="menu-price">21,00&nbsp;€</span><span class="menu-desc">Double filet de daurade fraîche AGA La Poissonnerie, cheddar, tomates séchées, roquette, sauce maison.</span></div>
+            <div class="menu-item"><span class="menu-name">Chicken burger</span><span class="menu-price">21,00&nbsp;€</span><span class="menu-desc">Poulet haché maison aux saveurs antillaises, tomates séchées, jeunes pousses, sauce maison.</span></div>
+            <div class="menu-item"><span class="menu-name">Burger végan <span class="badge">Végan</span></span><span class="menu-price">21,00&nbsp;€</span><span class="menu-desc">Croustillant végétalien, fromage végan saveur emmental, tomates séchées, roquette, sauce barbecue maison.</span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Incontournables</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Camembert rôti</span><span class="menu-price">19,00&nbsp;€</span><span class="menu-desc">Jambon ibérique « Coche », frites fraîches, salade.</span></div>
+            <div class="menu-item"><span class="menu-name">Burrata crémeuse</span><span class="menu-price">20,00&nbsp;€</span><span class="menu-desc">Assortiment de tomates, pesto maison, pignons.</span></div>
+            <div class="menu-item"><span class="menu-name">Tartare de thon</span><span class="menu-price">22,00&nbsp;€</span><span class="menu-desc">Selon arrivage, AGA La Poissonnerie.</span></div>
+            <div class="menu-item"><span class="menu-name">Tentacules de poulpe grillées</span><span class="menu-price">22,00&nbsp;€</span><span class="menu-desc">Selon arrivage, AGA La Poissonnerie.</span></div>
+            <div class="menu-item"><span class="menu-name">Tataki de thon</span><span class="menu-price">24,00&nbsp;€</span><span class="menu-desc">Selon arrivage, AGA La Poissonnerie.</span></div>
+            <div class="menu-item"><span class="menu-name">Tataki de bœuf</span><span class="menu-price">24,00&nbsp;€</span><span class="menu-desc">Selon arrivage, Boucherie MB Boutonnier.</span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Formule grillades table plancha — 34,90&nbsp;€</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Trilogie de viandes — Boucherie MB Boutonnier</span><span class="menu-price">34,90&nbsp;€</span><span class="menu-desc">Morceau de bœuf, côte d'agneau, poulet mariné. + vos légumes à griller.</span></div>
+            <div class="menu-item"><span class="menu-name">Trilogie de poissons — AGA La Poissonnerie</span><span class="menu-price">34,90&nbsp;€</span><span class="menu-desc">Saumon ou espadon selon arrivage, thon mariné, gambas. + vos légumes à griller.</span></div>
+            <div class="menu-item"><span class="menu-desc"><em>Sur réservation, minimum 2 personnes. Une trilogie par personne.</em></span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Menu enfants — 14&nbsp;€</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Steak haché façon bouchère, ou tenders, ou filet de daurade AGA La Poissonnerie</span><span class="menu-price">14,00&nbsp;€</span><span class="menu-desc">+ frites fraîches + 1 boule de glace + sirop au choix.</span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Desserts</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Cœur coulant chocolat Komptoir 45</span><span class="menu-price">8,50&nbsp;€</span></div>
+            <div class="menu-item"><span class="menu-name">Crumble aux fruits</span><span class="menu-price">8,50&nbsp;€</span><span class="menu-desc">Selon saison.</span></div>
+            <div class="menu-item"><span class="menu-name">Tartelette citron meringuée</span><span class="menu-price">8,50&nbsp;€</span><span class="menu-desc">Fabrication artisanale Boulangerie MI.CA.</span></div>
+            <div class="menu-item"><span class="menu-name">Kolonel</span><span class="menu-price">11,00&nbsp;€</span><span class="menu-desc">1 boule sorbet citron, arrosée de Belvédère.</span></div>
+            <div class="menu-item"><span class="menu-name">Kréole</span><span class="menu-price">11,00&nbsp;€</span><span class="menu-desc">1 boule vanille, arrosée de Diplomático.</span></div>
+            <div class="menu-item"><span class="menu-name">Keppermint</span><span class="menu-price">11,00&nbsp;€</span><span class="menu-desc">1 boule menthe pépites de chocolat, arrosée de Get 27.</span></div>
+            <div class="menu-item"><span class="menu-name">Kafé</span><span class="menu-price">11,00&nbsp;€</span><span class="menu-desc">1 boule café, arrosée de Bailey's.</span></div>
+          </div>
+        </details>
+
+        <details class="menu-cat">
+          <summary>Glaces artisanales Altiflore</summary>
+          <div class="menu-items">
+            <div class="menu-item"><span class="menu-name">Boules</span><span class="menu-price">2,50&nbsp;€ · 4,00&nbsp;€ · 6,00&nbsp;€</span><span class="menu-desc">x1 / x2 / x3 — Chocolat de Tanzanie, menthe pépites, fraise Senga, café de Colombie, vanille Bourbon, citron de Sicile et Menton, caramel fleur de sel, rhum-raisin, P'tits Dragons arôme bonbon.</span></div>
+            <div class="menu-item"><span class="menu-name">Supplément chantilly</span><span class="menu-price">1,00&nbsp;€</span></div>
+          </div>
+        </details>
+
+      </div>
+      <p class="menu-note">Prix nets · service compris · photos non contractuelles. Carte des boissons et version PDF imprimable disponibles ci-dessous.</p>
+      <div style="text-align:center; margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap">
+        <a class="cta cta-ghost" href="assets/textes-a4-lekomptoir45.pdf" target="_blank" rel="noopener">Carte PDF</a>
+        <a class="cta cta-ghost" href="assets/boissons-lekomptoir45.pdf" target="_blank" rel="noopener">Boissons PDF</a>
       </div>
     </div>
   </section>
