@@ -882,5 +882,19 @@
       document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
     })();
   </script>
+
+  <!-- ============ CARTE : ACCORDEON EXCLUSIF ============ -->
+  <script>
+    (function(){
+      var cats = document.querySelectorAll('.menu-cat');
+      cats.forEach(function(d){
+        d.addEventListener('toggle', function(){
+          if(d.open){
+            cats.forEach(function(o){ if(o !== d) o.open = false; });
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
