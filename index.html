@@ -891,6 +891,13 @@
         d.addEventListener('toggle', function(){
           if(d.open){
             cats.forEach(function(o){ if(o !== d) o.open = false; });
+            // Recale le summary en haut du viewport apres l'animation
+            requestAnimationFrame(function(){
+              setTimeout(function(){
+                var top = d.getBoundingClientRect().top + window.pageYOffset - 12;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+              }, 60);
+            });
           }
         });
       });
