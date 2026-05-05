@@ -79,12 +79,25 @@
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 43.27618073007092, "longitude": 3.486322193254308 },
     "hasMap": "https://maps.apple.com/?q=Mail+de+Rochelongue,+34300+Cap+d'Agde",
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "18:00",
-      "closes": "00:00"
-    }],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "18:00",
+        "closes": "00:00",
+        "validFrom": "2026-05-01",
+        "validThrough": "2026-05-31",
+        "description": "Mai : fermé les mardis et mercredis"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "18:00",
+        "closes": "00:00",
+        "validFrom": "2026-06-01",
+        "validThrough": "2026-09-30"
+      }
+    ],
     "menu": "https://lekomptoir45.fr/assets/textes-a4-lekomptoir45.pdf",
     "hasMenu": {
       "@type": "Menu",
@@ -204,6 +217,25 @@
     "image": "https://lekomptoir45.fr/images/og-lekomptoir45.jpg",
     "organizer": { "@id": "https://lekomptoir45.fr/#organization" },
     "offers": { "@type": "Offer", "url": "https://lekomptoir45.fr/", "availability": "https://schema.org/InStock", "price": "0", "priceCurrency": "EUR", "validFrom": "2026-03-01T00:00:00+01:00" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Soirée Karaoké avec DJ Toufik — Le Komptoir 45",
+    "description": "Soirée karaoké au restaurant Le Komptoir 45, Mail de Rochelongue à Cap d'Agde, animée par DJ Toufik.",
+    "startDate": "2026-05-08T20:00:00+02:00",
+    "endDate": "2026-05-09T01:00:00+02:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": { "@type": "Place", "name": "Le Komptoir 45",
+      "address": { "@type": "PostalAddress", "streetAddress": "Mail de Rochelongue", "addressLocality": "Cap d'Agde", "postalCode": "34300", "addressCountry": "FR" } },
+    "performer": { "@type": "PerformingGroup", "name": "DJ Toufik" },
+    "image": "https://lekomptoir45.fr/images/og-lekomptoir45.jpg",
+    "organizer": { "@id": "https://lekomptoir45.fr/#organization" },
+    "offers": { "@type": "Offer", "url": "https://lekomptoir45.fr/", "availability": "https://schema.org/InStock", "price": "0", "priceCurrency": "EUR", "validFrom": "2026-04-01T00:00:00+02:00" }
   }
   </script>
 
@@ -582,6 +614,45 @@
       .menu-desc{ font-size:13px; }
     }
 
+    /* ============ AGENDA / HORAIRES ============ */
+    .agenda-grid{
+      display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
+      max-width:880px; margin:0 auto;
+    }
+    @media (max-width:700px){ .agenda-grid{ grid-template-columns:1fr; } }
+    .agenda-card{
+      background:rgba(15,15,15,.72);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px; padding:24px 22px;
+      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    }
+    .agenda-card h3{
+      font-family:"Montserrat",sans-serif;
+      font-size:13px; letter-spacing:.18em; text-transform:uppercase;
+      color:#ED1C24; margin-bottom:14px; font-weight:800;
+    }
+    .agenda-card .row{
+      display:flex; justify-content:space-between; gap:14px;
+      padding:8px 0; border-bottom:1px dashed rgba(255,255,255,.08);
+      font-size:14.5px;
+    }
+    .agenda-card .row:last-child{ border-bottom:none; }
+    .agenda-card .row span:last-child{ color:rgba(233,233,233,.7); white-space:nowrap; }
+    .event-item{
+      display:flex; gap:14px; align-items:flex-start;
+      padding:10px 0; border-bottom:1px dashed rgba(255,255,255,.08);
+    }
+    .event-item:last-child{ border-bottom:none; }
+    .event-date{
+      flex-shrink:0; width:54px; text-align:center;
+      background:#ED1C24; color:#fff; border-radius:10px; padding:6px 0;
+      font-family:"Montserrat",sans-serif; line-height:1.1;
+    }
+    .event-date strong{ display:block; font-size:20px; font-weight:800; }
+    .event-date span{ font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
+    .event-info strong{ display:block; font-weight:600; color:#f3f3f3; font-size:15px; }
+    .event-info span{ display:block; color:rgba(233,233,233,.65); font-size:13px; margin-top:2px; }
+
     /* ============ REVEAL ANIM ============ */
     .reveal{ opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .8s ease; }
     .reveal.is-visible{ opacity:1; transform:translateY(0); }
@@ -637,8 +708,52 @@
         <div class="info-card">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 11h-3V7h2v4h2z"/></svg>
           <span class="label">Horaires</span>
-          <span class="value">Tous les jours<br>dès 18h</span>
+          <span class="value">Dès 18h<br><small style="opacity:.7">Mai : fermé mardi &amp; mercredi</small></span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AGENDA ============ -->
+  <section id="agenda">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Horaires &amp; événements</h2>
+        <p>Saison 2026 · ouvert dès 18h, restauration à partir de 19h</p>
+      </div>
+      <div class="agenda-grid reveal">
+
+        <div class="agenda-card">
+          <h3>Jours d'ouverture</h3>
+          <div class="row"><span>Lundi</span><span>18h – 00h</span></div>
+          <div class="row"><span>Mardi</span><span style="color:#ED1C24">Fermé en mai</span></div>
+          <div class="row"><span>Mercredi</span><span style="color:#ED1C24">Fermé en mai</span></div>
+          <div class="row"><span>Jeudi</span><span>18h – 00h</span></div>
+          <div class="row"><span>Vendredi</span><span>18h – 00h</span></div>
+          <div class="row"><span>Samedi</span><span>18h – 00h</span></div>
+          <div class="row"><span>Dimanche</span><span>18h – 00h</span></div>
+          <p style="margin-top:14px; font-size:12.5px; color:rgba(233,233,233,.55); font-style:italic">Du 1ᵉʳ juin au 30 septembre : ouvert tous les jours.</p>
+        </div>
+
+        <div class="agenda-card">
+          <h3>Événements à venir</h3>
+          <div class="event-item">
+            <div class="event-date"><strong>08</strong><span>Mai</span></div>
+            <div class="event-info">
+              <strong>Soirée karaoké avec DJ Toufik</strong>
+              <span>Vendredi soir · ambiance, chant, cocktails. Réservation conseillée.</span>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><strong>18</strong><span>Avr</span></div>
+            <div class="event-info">
+              <strong>Ouverture de saison 2026</strong>
+              <span>Samedi 18 avril dès 18h.</span>
+            </div>
+          </div>
+          <p style="margin-top:14px; font-size:12.5px; color:rgba(233,233,233,.55); font-style:italic">Suivez notre actualité sur Instagram et Facebook.</p>
+        </div>
+
       </div>
     </div>
   </section>
