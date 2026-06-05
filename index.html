@@ -79,13 +79,33 @@
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 43.27618073007092, "longitude": 3.486322193254308 },
     "hasMap": "https://maps.apple.com/?q=Mail+de+Rochelongue,+34300+Cap+d'Agde",
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "18:00",
-      "closes": "01:00",
-      "description": "Fermé le mercredi"
-    }],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "18:00",
+        "closes": "01:00",
+        "description": "Fermé le mercredi"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "12:00",
+        "closes": "14:30",
+        "validFrom": "2026-06-01",
+        "validThrough": "2026-06-30",
+        "description": "Service du midi tous les dimanches de juin"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "12:00",
+        "closes": "14:30",
+        "validFrom": "2026-06-06",
+        "validThrough": "2026-06-06",
+        "description": "Ouverture exceptionnelle midi pour la Poulpinade du Mail de Rochelongue"
+      }
+    ],
     "menu": "https://lekomptoir45.fr/assets/textes-a4-lekomptoir45.pdf",
     "hasMenu": {
       "@type": "Menu",
@@ -193,10 +213,28 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Poulpinade du Mail de Rochelongue — Ouverture midi Le Komptoir 45",
+    "description": "Le Komptoir 45 sera exceptionnellement ouvert le midi à l'occasion de la Poulpinade du Mail de Rochelongue (dégustations, animations, concerts).",
+    "startDate": "2026-06-06T12:00:00+02:00",
+    "endDate": "2026-06-06T15:00:00+02:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": { "@type": "Place", "name": "Le Komptoir 45 — Mail de Rochelongue",
+      "address": { "@type": "PostalAddress", "streetAddress": "Mail de Rochelongue", "addressLocality": "Cap d'Agde", "postalCode": "34300", "addressCountry": "FR" } },
+    "image": "https://lekomptoir45.fr/images/og-lekomptoir45.jpg",
+    "organizer": { "@id": "https://lekomptoir45.fr/#organization" },
+    "offers": { "@type": "Offer", "url": "https://lekomptoir45.fr/", "availability": "https://schema.org/InStock", "price": "0", "priceCurrency": "EUR", "validFrom": "2026-05-01T00:00:00+02:00" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": "Où se trouve Le Komptoir 45 à Cap d'Agde ?", "acceptedAnswer": { "@type": "Answer", "text": "Le Komptoir 45 est situé Mail de Rochelongue, 34300 Cap d'Agde, à proximité immédiate de la plage." } },
-      { "@type": "Question", "name": "Quels sont les horaires d'ouverture ?", "acceptedAnswer": { "@type": "Answer", "text": "Le restaurant est ouvert tous les jours sauf le mercredi, de 18h à 1h du matin. Restauration à partir de 19h." } },
+      { "@type": "Question", "name": "Quels sont les horaires d'ouverture ?", "acceptedAnswer": { "@type": "Answer", "text": "Le restaurant est ouvert tous les jours sauf le mercredi, de 18h à 1h du matin. Restauration à partir de 19h. En juin : ouverture également le midi tous les dimanches, ainsi que le samedi 6 juin pour la Poulpinade du Mail de Rochelongue." } },
       { "@type": "Question", "name": "Faut-il réserver ?", "acceptedAnswer": { "@type": "Answer", "text": "La réservation est conseillée, particulièrement en haute saison. Téléphone : 04 67 39 81 31. Pour les grillades à la plancha (trilogies), la réservation est obligatoire (minimum 2 personnes)." } },
       { "@type": "Question", "name": "Proposez-vous des options végétariennes, véganes ou sans gluten ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Falafels, houmous, guacamole, falafels bowl, burger végan et plusieurs tapas sont végans. La carte propose également des plats végétariens et sans gluten." } },
       { "@type": "Question", "name": "Quel type de cuisine proposez-vous ?", "acceptedAnswer": { "@type": "Answer", "text": "Cuisine méditerranéenne avec influences ibériques : tapas, planches, bowls, focaccias, burgers maison, grillades à la plancha, desserts maison et glaces artisanales Altiflore." } },
@@ -619,7 +657,12 @@
     <div class="wrap">
       <img class="logo" src="images/logo-lekomptoir45.svg" alt="Le Komptoir 45 — Cap d'Agde"/>
 
-<h1>Tapas, planches &amp; grillades au Mail&nbsp;de&nbsp;Rochelongue</h1>
+<div class="hero-banner">
+        <span class="nowrap"><strong>Samedi 6 juin · ouverture midi</strong></span>
+        <span class="nowrap">Poulpinade du Mail de Rochelongue</span>
+      </div>
+
+      <h1>Tapas, planches &amp; grillades au Mail&nbsp;de&nbsp;Rochelongue</h1>
       <p class="hero-sub">Cuisine méditerranéenne, produits frais et locaux. Ouvert tous les jours sauf le mercredi dès 18h, restauration à partir de 19h.</p>
 
       <div class="hero-tags">
@@ -676,12 +719,26 @@
           <div class="row"><span>Jeudi</span><span>18h – 01h</span></div>
           <div class="row"><span>Vendredi</span><span>18h – 01h</span></div>
           <div class="row"><span>Samedi</span><span>18h – 01h</span></div>
-          <div class="row"><span>Dimanche</span><span>18h – 01h</span></div>
-          <p style="margin-top:14px; font-size:12.5px; color:rgba(233,233,233,.55); font-style:italic">Service jusqu'à 1h du matin.</p>
+          <div class="row"><span>Dimanche</span><span>12h – 14h30 &amp; 18h – 01h</span></div>
+          <p style="margin-top:14px; font-size:12.5px; color:rgba(233,233,233,.55); font-style:italic">Tous les dimanches midi en juin · service du soir jusqu'à 1h du matin.</p>
         </div>
 
         <div class="agenda-card">
           <h3>Événements à venir</h3>
+          <div class="event-item">
+            <div class="event-date"><strong>06</strong><span>Juin</span></div>
+            <div class="event-info">
+              <strong>Poulpinade du Mail de Rochelongue</strong>
+              <span>Samedi 6 juin · K45 exceptionnellement ouvert le midi. Dégustations, animations, concerts sur le Mail.</span>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><strong>DIM</strong><span>Juin</span></div>
+            <div class="event-info">
+              <strong>Dimanches midi</strong>
+              <span>Tout le mois de juin · ouverture supplémentaire le midi le dimanche (12h – 14h30).</span>
+            </div>
+          </div>
           <p style="margin-top:14px; font-size:12.5px; color:rgba(233,233,233,.55); font-style:italic">Suivez notre actualité sur Instagram et Facebook.</p>
         </div>
 
