@@ -595,10 +595,9 @@
 
     /* ============ AGENDA / HORAIRES ============ */
     .agenda-grid{
-      display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
-      max-width:880px; margin:0 auto;
+      display:grid; grid-template-columns:1fr; gap:18px;
+      max-width:520px; margin:0 auto;
     }
-    @media (max-width:700px){ .agenda-grid{ grid-template-columns:1fr; } }
     .agenda-card{
       background:rgba(15,15,15,.72);
       border:1px solid rgba(255,255,255,.08);
@@ -697,7 +696,7 @@
   <section id="agenda">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2>Horaires &amp; événements</h2>
+        <h2>Horaires</h2>
         <p>Saison 2026 · ouvert dès 18h, restauration à partir de 19h</p>
       </div>
       <div class="agenda-grid reveal">
@@ -714,24 +713,6 @@
           <p style="margin-top:14px; font-size:12.5px; color:rgba(233,233,233,.55); font-style:italic">Tous les dimanches midi en juin · service du soir jusqu'à 1h du matin.</p>
         </div>
 
-        <div class="agenda-card">
-          <h3>Événements à venir</h3>
-          <div class="event-item">
-            <div class="event-date"><strong>21</strong><span>Juin</span></div>
-            <div class="event-info">
-              <strong>Fête de la musique · Los Tres Rumberos 🎶</strong>
-              <span>Dimanche 21 juin · concert live dès 21h. Rumba flamenca, guitares enflammées, ambiance gipsy au cœur du Mail de Rochelongue.</span>
-            </div>
-          </div>
-          <div class="event-item">
-            <div class="event-date"><strong>DIM</strong><span>Juin</span></div>
-            <div class="event-info">
-              <strong>Dimanches midi</strong>
-              <span>Tout le mois de juin · ouverture supplémentaire le midi le dimanche (12h – 14h30).</span>
-            </div>
-          </div>
-          <p style="margin-top:14px; font-size:12.5px; color:rgba(233,233,233,.55); font-style:italic">Suivez notre actualité sur Instagram et Facebook.</p>
-        </div>
 
       </div>
     </div>
