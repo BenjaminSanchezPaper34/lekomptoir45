@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://lekomptoir45.fr/</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -12,15 +12,9 @@
     </image:image>
   </url>
   <url>
-    <loc>https://lekomptoir45.fr/assets/textes-a4-lekomptoir45.pdf</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://lekomptoir45.fr/assets/boissons-lekomptoir45.pdf</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
 </urlset>
