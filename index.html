@@ -79,23 +79,12 @@
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 43.27618073007092, "longitude": 3.486322193254308 },
     "hasMap": "https://maps.apple.com/?q=Mail+de+Rochelongue,+34300+Cap+d'Agde",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "18:00",
-        "closes": "01:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "12:00",
-        "closes": "14:30",
-        "validFrom": "2026-06-01",
-        "validThrough": "2026-06-30",
-        "description": "Service du midi tous les dimanches de juin"
-      },
-    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "18:00",
+      "closes": "01:00"
+    }],
     "menu": "https://lekomptoir45.fr/assets/textes-a4-lekomptoir45.pdf",
     "hasMenu": {
       "@type": "Menu",
@@ -206,7 +195,7 @@
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": "Où se trouve Le Komptoir 45 à Cap d'Agde ?", "acceptedAnswer": { "@type": "Answer", "text": "Le Komptoir 45 est situé Mail de Rochelongue, 34300 Cap d'Agde, à proximité immédiate de la plage." } },
-      { "@type": "Question", "name": "Quels sont les horaires d'ouverture ?", "acceptedAnswer": { "@type": "Answer", "text": "Le restaurant est ouvert tous les jours de 18h à 1h du matin. Restauration à partir de 19h. En juin : ouverture également le midi tous les dimanches." } },
+      { "@type": "Question", "name": "Quels sont les horaires d'ouverture ?", "acceptedAnswer": { "@type": "Answer", "text": "Le restaurant est ouvert tous les jours de 18h à 1h du matin. Restauration à partir de 19h." } },
       { "@type": "Question", "name": "Faut-il réserver ?", "acceptedAnswer": { "@type": "Answer", "text": "La réservation est conseillée, particulièrement en haute saison. Téléphone : 04 67 39 81 31. Pour les grillades à la plancha (trilogies), la réservation est obligatoire (minimum 2 personnes)." } },
       { "@type": "Question", "name": "Proposez-vous des options végétariennes, véganes ou sans gluten ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Falafels, houmous, guacamole, falafels bowl, burger végan et plusieurs tapas sont végans. La carte propose également des plats végétariens et sans gluten." } },
       { "@type": "Question", "name": "Quel type de cuisine proposez-vous ?", "acceptedAnswer": { "@type": "Answer", "text": "Cuisine méditerranéenne avec influences ibériques : tapas, planches, bowls, focaccias, burgers maison, grillades à la plancha, desserts maison et glaces artisanales Altiflore." } },
@@ -574,44 +563,6 @@
       .menu-desc{ font-size:13px; }
     }
 
-    /* ============ AGENDA / HORAIRES ============ */
-    .agenda-grid{
-      display:grid; grid-template-columns:1fr; gap:18px;
-      max-width:520px; margin:0 auto;
-    }
-    .agenda-card{
-      background:rgba(15,15,15,.72);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:18px; padding:24px 22px;
-      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
-    }
-    .agenda-card h3{
-      font-family:"Montserrat",sans-serif;
-      font-size:13px; letter-spacing:.18em; text-transform:uppercase;
-      color:#ED1C24; margin-bottom:14px; font-weight:800;
-    }
-    .agenda-card .row{
-      display:flex; justify-content:space-between; gap:14px;
-      padding:8px 0; border-bottom:1px dashed rgba(255,255,255,.08);
-      font-size:14.5px;
-    }
-    .agenda-card .row:last-child{ border-bottom:none; }
-    .agenda-card .row span:last-child{ color:rgba(233,233,233,.7); white-space:nowrap; }
-    .event-item{
-      display:flex; gap:14px; align-items:flex-start;
-      padding:10px 0; border-bottom:1px dashed rgba(255,255,255,.08);
-    }
-    .event-item:last-child{ border-bottom:none; }
-    .event-date{
-      flex-shrink:0; width:54px; text-align:center;
-      background:#ED1C24; color:#fff; border-radius:10px; padding:6px 0;
-      font-family:"Montserrat",sans-serif; line-height:1.1;
-    }
-    .event-date strong{ display:block; font-size:20px; font-weight:800; }
-    .event-date span{ font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
-    .event-info strong{ display:block; font-weight:600; color:#f3f3f3; font-size:15px; }
-    .event-info span{ display:block; color:rgba(233,233,233,.65); font-size:13px; margin-top:2px; }
-
     /* ============ REVEAL ANIM ============ */
     .reveal{ opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .8s ease; }
     .reveal.is-visible{ opacity:1; transform:translateY(0); }
@@ -668,28 +619,30 @@
     </div>
   </section>
 
-  <!-- ============ AGENDA ============ -->
-  <section id="agenda">
+  <!-- ============ BENTO AMBIANCE ============ -->
+  <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <h2>Horaires</h2>
-        <p>Saison 2026 · ouvert dès 18h, restauration à partir de 19h</p>
+        <h2>L'ambiance du Komptoir</h2>
+        <p>Plats signature · Cocktails · Cap d'Agde</p>
       </div>
-      <div class="agenda-grid reveal">
-
-        <div class="agenda-card">
-          <h3>Jours d'ouverture</h3>
-          <div class="row"><span>Lundi</span><span>18h – 01h</span></div>
-          <div class="row"><span>Mardi</span><span>18h – 01h</span></div>
-          <div class="row"><span>Mercredi</span><span>18h – 01h</span></div>
-          <div class="row"><span>Jeudi</span><span>18h – 01h</span></div>
-          <div class="row"><span>Vendredi</span><span>18h – 01h</span></div>
-          <div class="row"><span>Samedi</span><span>18h – 01h</span></div>
-          <div class="row"><span>Dimanche</span><span>12h – 14h30 &amp; 18h – 01h</span></div>
-          <p style="margin-top:14px; font-size:12.5px; color:rgba(233,233,233,.55); font-style:italic">Tous les dimanches midi en juin · service du soir jusqu'à 1h du matin.</p>
+      <div class="bento-grid reveal">
+        <div class="tile t-video">
+          <video autoplay muted loop playsinline preload="metadata" poster="images/komptoir45-ambiance-poster.jpg">
+            <source src="videos/komptoir45-ambiance.mp4" type="video/mp4">
+          </video>
+          <span class="cap">Ambiance</span>
         </div>
-
-
+        <div class="tile t-wide">
+          <img loading="lazy" src="images/plats/brescou-coucher-soleil.webp" alt="Fort de Brescou au coucher de soleil"><span class="cap">Brescou</span>
+        </div>
+        <div class="tile t-big"><img loading="lazy" src="images/plats/burger.webp" alt="Burger"><span class="cap">Burger</span></div>
+        <div class="tile t-s1"><img loading="lazy" src="images/plats/aperol-spritz.webp" alt="Aperol Spritz"><span class="cap">Spritz</span></div>
+        <div class="tile t-s2"><img loading="lazy" src="images/plats/poke-bowl.webp" alt="Poke bowl"><span class="cap">Poke</span></div>
+        <div class="tile t-s3"><img loading="lazy" src="images/plats/burrata-tomates.webp" alt="Burrata tomates"><span class="cap">Burrata</span></div>
+        <div class="tile t-s4"><img loading="lazy" src="images/plats/falafels.webp" alt="Falafels"><span class="cap">Falafels</span></div>
+        <div class="tile t-s5"><img loading="lazy" src="images/plats/gambas.webp" alt="Gambas"><span class="cap">Gambas</span></div>
+        <div class="tile t-s6"><img loading="lazy" src="images/plats/coeur-coulant-chocolat.webp" alt="Cœur coulant chocolat"><span class="cap">Coulant</span></div>
       </div>
     </div>
   </section>
@@ -1037,34 +990,6 @@
       <p class="menu-note">Prix nets · service compris · photos non contractuelles. L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
       <div style="text-align:center; margin-top:20px">
         <a class="cta cta-ghost" href="assets/boissons-lekomptoir45.pdf" target="_blank" rel="noopener">Carte des boissons (PDF)</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ BENTO AMBIANCE ============ -->
-  <section>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>L'ambiance du Komptoir</h2>
-        <p>Plats signature · Cocktails · Cap d'Agde</p>
-      </div>
-      <div class="bento-grid reveal">
-        <div class="tile t-video">
-          <video autoplay muted loop playsinline preload="metadata" poster="images/komptoir45-ambiance-poster.jpg">
-            <source src="videos/komptoir45-ambiance.mp4" type="video/mp4">
-          </video>
-          <span class="cap">Ambiance</span>
-        </div>
-        <div class="tile t-wide">
-          <img loading="lazy" src="images/plats/brescou-coucher-soleil.webp" alt="Fort de Brescou au coucher de soleil"><span class="cap">Brescou</span>
-        </div>
-        <div class="tile t-big"><img loading="lazy" src="images/plats/burger.webp" alt="Burger"><span class="cap">Burger</span></div>
-        <div class="tile t-s1"><img loading="lazy" src="images/plats/aperol-spritz.webp" alt="Aperol Spritz"><span class="cap">Spritz</span></div>
-        <div class="tile t-s2"><img loading="lazy" src="images/plats/poke-bowl.webp" alt="Poke bowl"><span class="cap">Poke</span></div>
-        <div class="tile t-s3"><img loading="lazy" src="images/plats/burrata-tomates.webp" alt="Burrata tomates"><span class="cap">Burrata</span></div>
-        <div class="tile t-s4"><img loading="lazy" src="images/plats/falafels.webp" alt="Falafels"><span class="cap">Falafels</span></div>
-        <div class="tile t-s5"><img loading="lazy" src="images/plats/gambas.webp" alt="Gambas"><span class="cap">Gambas</span></div>
-        <div class="tile t-s6"><img loading="lazy" src="images/plats/coeur-coulant-chocolat.webp" alt="Cœur coulant chocolat"><span class="cap">Coulant</span></div>
       </div>
     </div>
   </section>
